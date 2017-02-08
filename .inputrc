@@ -1,5 +1,4 @@
-
- Bash
+$if Bash
 # ignore case
   set completion-ignore-case on
 
@@ -10,4 +9,4 @@
   "\e[0A": history-search-backward
   "\e[B": history-search-forward
   "\e[0B": history-search-forward
-
+$endif
