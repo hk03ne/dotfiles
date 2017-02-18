@@ -21,25 +21,18 @@ alias ltr='ls -ltr'
 alias vi='vim'
 
 # reload settings
-alias reload='[ -e  ~/.bash_profile ] && source ~/.bash_profile || [ -e  ~/.bashrc ] && source ~/.bashrc'
+alias reload='source ~/.bashrc'
 alias re=reload
-
-# reset display
-#alias c=clear
-alias cls=reset
 
 # Windows commands
 alias dir=ll
 alias path='echo -e ${PATH//:/\\n}'
 
-# open current directory
-alias e='explorer .'
-
 # format csv file
 alias col='column -s, -t'
 
 # ocaml
-##alias ocaml='rlwrap ocaml'
+# alias ocaml='rlwrap ocaml'
 
 # short memo
 alias hitokoto='hitokoto.sh'
@@ -48,6 +41,5 @@ alias h='hitokoto.sh'
 alias yamabiko='echo -ne "> "; while read line ; do sleep 1; echo ">> $line ..." ; echo -ne "> "; done'
 alias c='compile_c.sh'
 alias aalias='add_alias'
-alias n='notepad.exe'
-
+alias e=exit
 

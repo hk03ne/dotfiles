@@ -17,7 +17,7 @@ set iminsert=0 imsearch=0
 inoremap <silent> <ESC> <ESC>
 
 " setting Font"
-set guifont=Inconsolata:h12
+set guifont='Migu 1M':h12
 
 set background=light
-" colorscheme iceberg
+" colorscheme ron
