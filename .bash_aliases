@@ -42,4 +42,4 @@ alias yamabiko='echo -ne "> "; while read line ; do sleep 1; echo ">> $line ..."
 alias c='compile_c.sh'
 alias aalias='add_alias'
 alias e=exit
-
+alias oppai=git
