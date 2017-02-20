@@ -3,12 +3,14 @@ set encoding=utf-8
 set fileencodings=iso-2022-jp,iso-2022-jp-2,utf-8,euc-jp,sjis
 
 " color
+syntax enable
 set t_Co=256
 colorscheme jellybeans
-syntax enable
+set cursorline
 
 " basic settings
-set title
+set autochdir
+set notitle
 set number
 set ruler
 set paste
@@ -20,6 +22,7 @@ set showcmd
 set backspace=indent,eol,start
 set showmatch
 set matchtime=1
+set writebackup
 set noswapfile
 
 " indentation
