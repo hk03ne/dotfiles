@@ -38,7 +38,7 @@ conky.config = {
     draw_outline = false,
     draw_shades = false,
     use_xft = true,
-    font = 'DejaVu Sans Mono:size=12',
+    font = 'Migu 1M:size=12',
     gap_x = 5,
     gap_y = 60,
     minimum_height = 5,
@@ -63,7 +63,7 @@ conky.config = {
 }
 
 conky.text = [[
-${scroll 16 $nodename - $sysname $kernel on $machine | }
+${color}${font :size=20}${time %Y/%m/%d %A %H:%M}${font}${color}
 $hr
 ${color grey}Uptime:$color $uptime
 ${color grey}Frequency (in MHz):$color $freq

@@ -13,7 +13,6 @@ set autochdir
 set notitle
 set number
 set ruler
-set paste
 set laststatus=2
 set showtabline=2
 set wildmenu
@@ -28,7 +27,7 @@ set noswapfile
 " indentation
 set autoindent
 set smartindent
-set cindent
+"set cindent
 set shiftwidth=2
 set tabstop=2
 set expandtab
@@ -48,6 +47,11 @@ set undofile
 set mouse=a
 set ttymouse=xterm2
 
+" use tab to Makefile
+let _curfile=expand("%:r")
+if _curfile == 'Makefile'
+  set noexpandtab
+  endif
 
 "
 " Keymap

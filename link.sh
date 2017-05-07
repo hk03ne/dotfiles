@@ -4,8 +4,7 @@ set -eu
 function link-dotfile() {
   echo -n "$1: "
   if [ -e ~/$1 ]; then
-    cat ~/dotfiles/$1 >> ~/$1
-    echo "file exists. added settings to the existing file"
+    echo "file exists. not linked."
   else
     ln -s ~/dotfiles/$1 ~/$1
     echo "linked"

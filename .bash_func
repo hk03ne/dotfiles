@@ -1,3 +1,4 @@
+echo .bash_func
 # .bash_aliases に alias を追記して再読み込み
 add_alias() {
   bash_aliases=~/.bash_aliases

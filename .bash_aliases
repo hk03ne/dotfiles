@@ -1,6 +1,4 @@
-#
-# ~/.bash_aliases
-#
+echo .bash_aliases
 
 # general shortcuts
 alias mv='mv -iv'
@@ -9,6 +7,7 @@ alias cp='cp -iv'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias dc='cd'
+alias sl='ls'
 
 # ls aliases
 alias ls='ls --color=auto --show-control-chars --time-style=long-iso -FH'
@@ -28,18 +27,19 @@ alias re=reload
 alias dir=ll
 alias path='echo -e ${PATH//:/\\n}'
 
-# format csv file
-alias col='column -s, -t'
-
 # ocaml
-# alias ocaml='rlwrap ocaml'
+alias ocaml='rlwrap -c ocaml'
 
 # short memo
 alias hitokoto='hitokoto.sh'
-alias h='hitokoto.sh'
 
-alias yamabiko='echo -ne "> "; while read line ; do sleep 1; echo ">> $line ..." ; echo -ne "> "; done'
 alias c='compile_c.sh'
+alias e='execute.sh'
 alias aalias='add_alias'
-alias e=exit
-alias oppai=git
+alias oppai='git'
+alias x='chmod +x'
+alias r='run.sh'
+alias p='pwd'
+
+alias h='history'
+
