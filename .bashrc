@@ -6,3 +6,5 @@ fi
 # cd option
 shopt -s autocd
 shopt -s cdspell
+
+export PS1=" | \w\n | $"

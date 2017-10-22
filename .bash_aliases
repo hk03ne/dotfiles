@@ -1,23 +1,26 @@
-echo .bash_aliases
-
 # general shortcuts
 alias mv='mv -iv'
 alias rm='rm -iv'
 alias cp='cp -iv'
 alias ..='cd ..'
-alias ...='cd ../..'
-alias dc='cd'
-alias sl='ls'
+alias dc='cd?'
+alias sl='ls?'
+alias p='pwd'
+alias h='history'
+alias c=clear
 
 # ls aliases
-alias ls='ls --color=auto --show-control-chars --time-style=long-iso -FH'
-alias ll='ls -l'
-alias la='ls -Al'
+case "${OSTYPE}" in
+darwin*)
+  alias ls='ls -G'
+  ;;
+linux*)
+  alias ls='ls --color=auto --show-control-chars --time-style=long-iso -FH'
+  ;;
+esac
+alias ll='ls -Al'
+alias la='ls -A'
 alias l='ls -1'
-alias ltr='ls -ltr'
-
-# vim
-alias vi='vim'
 
 # reload settings
 alias reload='source ~/.bashrc'
@@ -31,15 +34,6 @@ alias path='echo -e ${PATH//:/\\n}'
 alias ocaml='rlwrap -c ocaml'
 
 # short memo
-alias hitokoto='hitokoto.sh'
+echo "[$(date '+%F %T')] $*" >> ~/hitokoto.log 
 
-alias c='compile_c.sh'
-alias e='execute.sh'
-alias aalias='add_alias'
-alias oppai='git'
-alias x='chmod +x'
-alias r='run.sh'
-alias p='pwd'
-
-alias h='history'
 

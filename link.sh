@@ -4,7 +4,8 @@ set -eu
 function link-dotfile() {
   echo -n "$1: "
   if [ -e ~/$1 ]; then
-    echo "file exists. not linked."
+    cat ~/dotfiles/$1 >> ~/$1
+    echo "added"
   else
     ln -s ~/dotfiles/$1 ~/$1
     echo "linked"
@@ -13,6 +14,6 @@ function link-dotfile() {
 
 cd ~/dotfiles
 for file in .??*; do
-    [[ "$file" == ".git" ]] && continue
-    link-dotfile $file
+  [[ "$file" == ".git" ]] && continue
+  link-dotfile $file
 done
