@@ -34,6 +34,11 @@ alias path='echo -e ${PATH//:/\\n}'
 alias ocaml='rlwrap -c ocaml'
 
 # short memo
-echo "[$(date '+%F %T')] $*" >> ~/hitokoto.log 
-
-
+hitokoto() {
+  LOG_FILE=~/hitokoto.log
+  if [ $# = 0 ]; then
+    cat $LOG_FILE
+  else
+    echo "[$(date '+%F %T')] $*" >> $LOG_FILE
+  fi
+}
